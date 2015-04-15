@@ -1,5 +1,5 @@
 import sys
-from location import Location
+from geopy.location import Location
 
 if __name__ == "__main__":
     argvs = sys.argv

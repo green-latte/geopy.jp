@@ -1,13 +1,18 @@
 from setuptools import setup, find_packages
+from version import VERSION
 
 setup(
-    name='geopy',
-    version='0.1.0',
+    name="geopy.jp",
+    version=VERSION,
+    description='Geocoding library for Python.',
+    author='Green Latte',
+    author_email='k.takeuchi@warrantee.co.jp',
+    url='https://github.com/green-latte/geopy.jp',
+    download_url=(
+        'https://github.com/green-latte/geopy.jp/archive/%s.tar.gz' % VERSION
+    ),
     packages=find_packages(),
-    include_package_data=True,
-    install_requires=[],
-    entry_points="""
-        [console_scripts]
-        geopy = geopy::main
-    """,
+    install_requires=open('requirements.txt').read().splitlines(),
+    license='MIT',
+    keywords='japan geocoding translate zipcode address',
 )
